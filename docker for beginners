@@ -1,0 +1,155 @@
+What is Docker: Docker Tutorial For Beginners
+
+Docker is fastest technology tool that is used to launch the operating system within a second. 
+It provide the platform to launch a operating system, Programming Language (like python, java & etc..) and many Software Like Wordpress and etc.. within a seconds. 
+docker is can't run directly in windows but its run on window 2016 version to latest version. if you need to work on docker in window you can install docker tool box and read the official docker documentation.
+
+Docker is a tool
+In docker we are create a container for create, deploy and running a application.
+Docker is open Source Project.
+It is written in GO language.
+there are two types of docker in market     a). docker CE  it's free to use     b). docker EE  it's not free
+For learning a Devops Technology you need to learn Docker. 
+
+
+install docker in Ubuntu click here or you can simply run this command
+
+sudo apt install docker.io
+
+install docker in Centos click here
+
+install docker in Mac Click here
+
+Another Os Click here
+
+
+Basic commands of Docker 
+
+After using this all command you can easily familiar with docker 
+
+1. For start the service of docker 
+	systemctl  start  docker
+
+2. For checking version of docker which is in your system
+	docker  version
+	
+3. For checking information of docker 
+	docker  info
+	 
+4. For checking status of docker 
+	systemctl  status  docker 
+
+5. For Searh any image in docker 
+	docker  search  imagename 
+
+        (Ex: docker  search  python)
+
+6. For Download any image in docker 
+	docker  pull  imagename 
+
+        (Ex:  docker  pull  hello-world)
+	
+7. For check images of docker which is downloded(present) in your machine 
+	docker  images
+	
+8. For running any image 
+	docker  run  imagename
+
+        (Ex:  docker  run  fedora)
+	
+9. For launching any container 
+	docker  run  -it  --name  anyname  imagename 
+
+        (Ex:  docker  run  -it  --name  us  fedora)
+	
+when you run this command you have new container or new os of fedora which is very new now you try to run some fedora command here its work.
+
+10. For come back your own Operating System 
+		Ctrl+pq  or exit 
+		 
+		 a. ctrl+pq use if you not like to stop the container
+		 b. exit use if you like the stop the container
+		 
+11. For checking How many container are currently running
+		docker  ps
+		
+12. For checking How many container are created
+		docker  ps  -a
+		
+13. For checking how many container are avaiable 
+		docker  ps  -qa
+		
+14. For removing any container 
+		docker rm container name/container id 
+
+                (Ex:  docker  rm  us)
+		
+		#you can check conatiner name or id for using command docker ps -a or docker ps
+		
+15. For removing all stop Container
+		docker  rm  $(docker  ps  -qa)
+		
+		if you like to remove all container which is start or not
+			docker  rm  -f  $(docker  ps  -qa)
+		
+16. For removing any image 
+		docker  rmi  imagename
+
+                 (Ex: docker  rmi  fedora)
+		
+17. For checking information of container or image
+		docker  inspect  containername  or  imagename 
+
+                (Ex: docker  inspect  us  or  docker  inspect  fedora)
+		
+18. For attaching in any running container 
+		docker  attach  containername 
+
+                (Ex: docker  attach  us)
+		
+19. For stop any running Container 
+		docker  stop  containername
+
+                 (Ex: docker  stop  us)
+		
+20. For changing any image name 
+		docker  tag  imagename:version   newname:version 
+
+                (Ex: docker  tag  us:v1  newus:v1)
+		
+21. For checking previous command is running in container 
+		docker  logs  us
+		
+22. For checking current process of your container
+		docker  logs  -f  us 
+		
+23. For execute any command in conatainer without going inside conatiner
+		docker  exec  date  us
+		
+	# if you are wish to going inside conatainer and by default you can use exit but you wish container is not stop so you can use
+			docker  exec  -it  us  bash
+			# now you enter exit container is not stop
+			
+24. For checking which command is avaiable in docker 
+		docker  press2timetab
+		
+25. For converting your container into image
+		docker  commit  containername:version   newiamgename:version
+ 
+                (Ex:   docker  commit  us:v1  usimage:v1)
+		
+26. For upload your docker image in docker hub you can rename your image name as your docker id name/imagename
+		docker    push     youridname/imagesname:v1
+ 
+                (Ex:  docker   push   ujjwal/newimage:v1)
+		
+27. For any help in docker 
+		docker   --help
+    
+ 
+checkout my blog--->> https://technologiesgyan.blogspot.com/2020/05/docker-tutorial-for-beginners-basic.html
+
+
+In Our Next Bloag we are try to cover the Docker Storage(Volume), Networking in docker, docker compose, Wordpress and mysql In docker and many more Docker topics so don't forget to follow and subscribe my blog. and also you are learn something new to this blog so please comment. if you find something wrong here so Don't forget to comment. 
+Thank you guys 
+@ujjwalsharma1244
